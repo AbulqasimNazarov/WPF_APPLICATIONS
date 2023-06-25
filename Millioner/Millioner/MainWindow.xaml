@@ -16,14 +16,16 @@
 
     </Window.Resources>
     
+    
+    
     <Grid >
         
-
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             
         </Grid.RowDefinitions>
+        
         
         <Grid>
             <Grid.ColumnDefinitions>
@@ -66,11 +68,13 @@
                 Click="ButtonStart_Click" />
 
 
-
+        <Image x:Name="FinishPic" 
+               Source=".\Resource\WON.png" Visibility="Hidden"
+               Height="250" Width="500"/>
 
         <Image x:Name="Loqopic" 
                Grid.Row="0" Grid.Column="1"              
-               Source="C:\Users\User\Desktop\milyonerLoqo.png"/>
+               Source="/Resource/milyonerLoqo.png"/>
 
 
 
@@ -78,7 +82,7 @@
                x:Name="LOSEPIC" 
                Grid.Row="0" Grid.Column="1"
                
-               Source="C:\Users\User\Desktop\LOSE.png"/>
+               Source="./Resource/milyonerLoqo.png"/>
 
 
     </Grid>
