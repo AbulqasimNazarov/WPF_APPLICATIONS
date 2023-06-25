@@ -6,6 +6,16 @@
         xmlns:local="clr-namespace:Millioner"
         mc:Ignorable="d"
         Title="MILLIONAIREapp" Background="CadetBlue" Height="500" Width="800" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Window.Resources>
+    
     <Grid >
         
 
@@ -21,44 +31,54 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBox x:Name="questionBox"
-                         FontSize="17"
-                     Background="CadetBlue"/>
+            <TextBox x:Name="questionBox" 
+                     TextWrapping="Wrap"
+                         FontSize="40">
+            </TextBox>
+            
             <ListBox x:Name="questionListBox"
-                     Grid.Row="1" 
-                     Grid.Column="1"
-                     Background="CadetBlue"/>
+                     Grid.Row="1" Grid.Column="1"
+                     FontSize="20"> 
+            </ListBox>
             
 
 
         </Grid>
         <UniformGrid Grid.Row="1" Columns="2" Rows="2">
-
-
-            <Button x:Name="buttonA" Content="A:  " HorizontalContentAlignment="Left"
-                    FontSize="{Binding FontSizeValue}" Background="FloralWhite"
-                    Click="answerButoon_click"/>
-            <Button x:Name="buttonB" Content="B:  " HorizontalContentAlignment="Left"
-                    FontSize="{Binding FontSizeValue}" Background="FloralWhite"/>
-            <Button x:Name="buttonC" Content="C:  " HorizontalContentAlignment="Left"
-                    FontSize="{Binding FontSizeValue}" Background="FloralWhite"/>
-            <Button x:Name="buttonD" Content="D:  " HorizontalContentAlignment="Left" 
-                    FontSize="{Binding FontSizeValue}" Background="FloralWhite"/>
+            <Button x:Name="buttonA" Content="A:  "                    
+                    Click="buttonAnswer_Click"/>
+            <Button x:Name="buttonB" Content="B:  "                    
+                    Click="buttonAnswer_Click"/>
+            <Button x:Name="buttonC" Content="C:  "                     
+                    Click="buttonAnswer_Click"/>
+            <Button x:Name="buttonD" Content="D:  "                     
+                    Click="buttonAnswer_Click"/>
         </UniformGrid>
 
-        <Button x:Name="buttonStart" Grid.Row="1"
-                Background="FloralWhite"
-                FontSize="100"
-                
-                Content="Start" 
-                Click="ButtonStart_Click" FontWeight="ExtraBold" FontFamily="Impact"/>
+        <Button x:Name="buttonAgainStart" Content="Try Again"
+                Style="{StaticResource Starting}"/>
+
+
+
+
+        <Button x:Name="buttonStart" Content="Start"
+                Style="{StaticResource Starting}"     
+                Click="ButtonStart_Click" />
+
+
+
 
         <Image x:Name="Loqopic" 
-               Grid.Row="0" Grid.Column="1"
-               
+               Grid.Row="0" Grid.Column="1"              
                Source="C:\Users\User\Desktop\milyonerLoqo.png"/>
 
 
+
+        <Image Visibility="Hidden"
+               x:Name="LOSEPIC" 
+               Grid.Row="0" Grid.Column="1"
+               
+               Source="C:\Users\User\Desktop\LOSE.png"/>
 
 
     </Grid>

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Millioner;
 
-internal class QuestionListBOX
+public class QuestionListBOX
 {
     public static void addElementToListBox(ref ListBox l)
     {
