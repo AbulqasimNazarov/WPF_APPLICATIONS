@@ -8,7 +8,7 @@ namespace Millioner;
 
 public partial class MainWindow
 {
-
+    
     public void ELSE()
     {
         
@@ -56,6 +56,15 @@ public partial class MainWindow
 
     }
 
+
+    private void buttonAgainStart_Click(object sender, RoutedEventArgs e)
+    {
+        this.buttonAgainStart.Visibility = Visibility.Hidden;
+        this.LOSEPIC.Visibility = Visibility.Hidden;
+        this.FinishPic.Visibility = Visibility.Hidden;
+        deleqat del = ButtonStart_Click;
+        del(sender, e);
+    }
 
     private void buttonAnswer_Click(object sender, RoutedEventArgs e)
     {
@@ -141,7 +150,8 @@ public partial class MainWindow
                 {
                     ELSE();
                     this.LOSEPIC.Visibility = Visibility.Hidden;
-                    this.buttonAgainStart.Visibility = Visibility.Hidden;
+                    //this.buttonAgainStart.Visibility = Visibility.Hidden;
+                    this.FinishPic.Visibility = Visibility.Visible;
 
                 }
                 else

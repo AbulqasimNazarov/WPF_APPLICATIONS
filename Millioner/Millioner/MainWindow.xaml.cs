@@ -27,7 +27,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     public event PropertyChangedEventHandler? PropertyChanged;
 
     public int questionNumber = 0;
-
+    public delegate void deleqat(object sender, RoutedEventArgs e);
     public string FontSizeValue { get; set; } = "30";
     public MainWindow()
     {
@@ -38,10 +38,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
         QuestionListBOX.addElementToListBox(ref this.questionListBox);
 
-
+        
         this.DataContext = this;
 
     }
 
-    
+   
 }
