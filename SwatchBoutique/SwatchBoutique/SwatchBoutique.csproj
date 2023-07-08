@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <None Remove="Assets\Logo.png" />
+    <None Remove="Assets\unnamed %281%29.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\unnamed (1).jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
