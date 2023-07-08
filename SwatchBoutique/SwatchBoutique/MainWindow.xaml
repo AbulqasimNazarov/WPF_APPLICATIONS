@@ -39,10 +39,10 @@
             <Button Content="SHOPPING BAG" Grid.Column="7"/>
         </Grid>
 
-        <Image Source="C:\Users\User\Desktop\Logo.png"
+        <Image Source="\Assets\Logo.png"
                Grid.Row="1"/>
 
         <Image Grid.Row="2" 
-            Source="C:\Users\User\Desktop\unnamed (1).jpg"/>
+            Source="\Assets\unnamed (1).jpg"/>
     </Grid>
 </Window>
