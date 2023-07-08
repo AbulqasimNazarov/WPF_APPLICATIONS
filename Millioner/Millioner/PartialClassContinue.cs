@@ -135,6 +135,7 @@ public partial class MainWindow
                     { 
                         answers5.Otrabotka(this.questionBox, this.buttons);
                         this.questionListBox.SelectedIndex = 4;
+                       
                         this.questionNumber = 5;
                     }
                     else

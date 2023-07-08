@@ -42,7 +42,10 @@
                      Grid.Row="1" Grid.Column="1"
                      FontSize="20"> 
             </ListBox>
-            
+
+           
+
+
 
 
         </Grid>
@@ -70,7 +73,8 @@
 
 
         <Image x:Name="FinishPic" 
-               Source="D:\WPFSTARTED\WPF_APPLICATIONS\Millioner\Millioner\Pictures\WON.png" Visibility="Hidden"
+               Source="D:\WPFSTARTED\WPF_APPLICATIONS\Millioner\Millioner\Pictures\WON.png"
+               Visibility="Hidden"
                Height="250" Width="500"/>
 
         <Image x:Name="Loqopic" 
@@ -84,7 +88,6 @@
                Grid.Row="0" Grid.Column="1"
                
                Source="D:\WPFSTARTED\WPF_APPLICATIONS\Millioner\Millioner\Pictures\LOSE.png"/>
-
-
+        
     </Grid>
 </Window>
