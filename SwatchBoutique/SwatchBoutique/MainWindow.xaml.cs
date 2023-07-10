@@ -27,5 +27,31 @@ namespace SwatchBoutique
         }
 
         
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            CollectionWindow objWomen = new CollectionWindow();
+            CollectionWindow objMen = new CollectionWindow("MEN");
+            if ((sender as Button).Name == "buttonWomen")
+            {
+                Console.WriteLine("woman");
+                objWomen.ShowDialog();
+            }
+            else if ((sender as Button).Name == "buttonMen")
+            {
+
+                objMen.ShowDialog();
+            }
+        }
+
+        //private void Click_Collection(object sender, RoutedEventArgs e)
+        //{
+        //    CollectionWindow obj = new CollectionWindow();
+        //    Button button = new Button();
+        //    if (button.Name == "buttonWomen")
+        //    {
+        //        obj.ShowDialog();
+        //    }
+        //}
     }
 }

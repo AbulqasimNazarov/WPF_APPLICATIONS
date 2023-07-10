@@ -32,11 +32,26 @@
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width=" 120"/>
             </Grid.ColumnDefinitions>
-            <Button Content="WOMEN" Grid.Column="0"/>
-            <Button Content="MEN" Grid.Column="1"/>
-            <Button Content="NEW COLLECTION" Grid.Column="2"/>
-            <Button Content="SIGN IN" Grid.Column="6"/>
-            <Button Content="SHOPPING BAG" Grid.Column="7"/>
+            <Button Content="WOMEN" Grid.Column="0"
+                    x:Name="buttonWomen"
+                    Click="button_Click"
+                    Style="{StaticResource MenuButtonsStyle}"/>
+            <Button Content="MEN" Grid.Column="1"
+                    x:Name="buttonMen"
+                    Click="button_Click"
+                    Style="{StaticResource MenuButtonsStyle}"/>
+            <Button Content="NEW COLLECTION" Grid.Column="2"
+                    x:Name="buttonNewCollection"
+                    Click="button_Click"
+                    Style="{StaticResource MenuButtonsStyle}"/>
+            <Button Content="SIGN IN" Grid.Column="6"
+                    x:Name="buttonSignIn"
+                    Click="button_Click"
+                    Style="{StaticResource MenuButtonsStyle}"/>
+            <Button Content="SHOPPING BAG" Grid.Column="7"
+                    x:Name="buttonShoppingBag"
+                    Click="button_Click"
+                    Style="{StaticResource MenuButtonsStyle}"/>
         </Grid>
 
         <Image Source="\Assets\Logo.png"
