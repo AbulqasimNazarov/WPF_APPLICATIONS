@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SwatchBoutique
 {
@@ -19,16 +20,48 @@ namespace SwatchBoutique
     /// </summary>
     public partial class CollectionWindow : Window
     {
+        
+
         public CollectionWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
             
         }
 
         public CollectionWindow(string name)
         {
             InitializeComponent();
+            this.DataContext = this;
             this.nameOfThePage.Content = name;
+
+
+            
+
+            var bitmapImage1 = new BitmapImage();
+            var bitmapImage2 = new BitmapImage();
+            var bitmapImage3 = new BitmapImage();
+            
+            
+            
+            // LINQ
+            this.womenPic1.Source = bitmapImage1.ChangePic("Assets/men1.png");
+            this.womenPic2.Source = bitmapImage2.ChangePic("Assets/men2 - Copy.png");
+            this.womenPic3.Source = bitmapImage3.ChangePic("Assets/men3 - Copy.png");
+
+
+            
+
+            this.Info1.Text = "Men Pre-Owned Rolex Watches";
+            this.Info2.Text = "Men Pre-Owned Rolex Watches";
+            this.info3.Text = "Men Pre-Owned Rolex Watches";
+
+            this.price1.Text = "7.000,00";
+            this.price2.Text = "12.000,00";
+            this.price3.Text = "8.000,00";
+
+            
+            
         }
 
         

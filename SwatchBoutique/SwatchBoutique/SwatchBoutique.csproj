@@ -9,6 +9,13 @@
 
   <ItemGroup>
     <None Remove="Assets\Logo.png" />
+    <None Remove="Assets\m1.png" />
+    <None Remove="Assets\men1.png" />
+    <None Remove="Assets\men2 - Copy.png" />
+    <None Remove="Assets\men2.png" />
+    <None Remove="Assets\men3 - Copy.png" />
+    <None Remove="Assets\men3.png" />
+    <None Remove="Assets\Test.png" />
     <None Remove="Assets\unnamed %281%29.jpg" />
     <None Remove="Assets\Women1.png" />
     <None Remove="Assets\Women2.png" />
@@ -17,6 +24,15 @@
 
   <ItemGroup>
     <Resource Include="Assets\Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\men1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\men2 - Copy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\men3 - Copy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\unnamed (1).jpg">

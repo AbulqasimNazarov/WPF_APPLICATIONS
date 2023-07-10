@@ -20,6 +20,7 @@ namespace SwatchBoutique
     /// </summary>
     public partial class MainWindow : Window
     {
+        public System.Windows.Media.ImageSource Icon { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -42,16 +43,9 @@ namespace SwatchBoutique
 
                 objMen.ShowDialog();
             }
+           
         }
 
-        //private void Click_Collection(object sender, RoutedEventArgs e)
-        //{
-        //    CollectionWindow obj = new CollectionWindow();
-        //    Button button = new Button();
-        //    if (button.Name == "buttonWomen")
-        //    {
-        //        obj.ShowDialog();
-        //    }
-        //}
+        
     }
 }

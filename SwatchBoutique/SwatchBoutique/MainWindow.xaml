@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwatchBoutique"
+        
         mc:Ignorable="d"
         Title="ROLEX STORE APPLICATION" Height="577" Width="583" ResizeMode="NoResize">
 
@@ -40,10 +41,7 @@
                     x:Name="buttonMen"
                     Click="button_Click"
                     Style="{StaticResource MenuButtonsStyle}"/>
-            <Button Content="NEW COLLECTION" Grid.Column="2"
-                    x:Name="buttonNewCollection"
-                    Click="button_Click"
-                    Style="{StaticResource MenuButtonsStyle}"/>
+            
             <Button Content="SIGN IN" Grid.Column="6"
                     x:Name="buttonSignIn"
                     Click="button_Click"

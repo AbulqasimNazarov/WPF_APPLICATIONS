@@ -30,9 +30,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Image Source="\Assets\Women3.png" Grid.Row="0"/>
-            <Image Source="\Assets\Women1.png" Grid.Column="1"/>
-            <Image Source="\Assets\Women2.png" Grid.Column="2"/>
+            <Image x:Name="womenPic1" 
+                   Source="\Assets\Women1.png" Grid.Column="0"/>
+            <Image x:Name="womenPic2" 
+                   Source="\Assets\Women2.png" Grid.Column="1"/>
+            <Image x:Name="womenPic3" 
+                   Source="\Assets\Women3.png" Grid.Column="2"/>
         </Grid>
 
         <Grid Grid.Row="3">
@@ -48,10 +51,12 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Style="{StaticResource TextBoxStyle1}"
+                <TextBox x:Name="Info1"
+                        Style="{StaticResource TextBoxStyle1}"
                         Grid.Row="0" Text="Ladies Pre-Owned Rolex Watches" 
                         FontSize="11" IsEnabled="False"/>
-                <TextBox Style="{StaticResource TextBoxStyle2}"
+                <TextBox x:Name="price1"
+                         Style="{StaticResource TextBoxStyle2}"
                          Grid.Row="1" Text="$ 5.000,00" 
                          FontSize="12" IsEnabled="False"/>
                 <Button Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
@@ -65,10 +70,12 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Style="{StaticResource TextBoxStyle1}"
+                <TextBox x:Name="Info2"
+                        Style="{StaticResource TextBoxStyle1}"
                         Grid.Row="0" Text="Ladies Pre-Owned Rolex Watches" 
                         FontSize="11" IsEnabled="False"/>
-                <TextBox Style="{StaticResource TextBoxStyle2}"
+                <TextBox x:Name="price2"
+                         Style="{StaticResource TextBoxStyle2}"
                          Grid.Row="1" Text="$ 6.000,00" 
                          FontSize="12" IsEnabled="False"/>
                 <Button Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
@@ -79,10 +86,12 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Style="{StaticResource TextBoxStyle1}"
+                <TextBox x:Name="info3"
+                        Style="{StaticResource TextBoxStyle1}"
                         Grid.Row="0" Text="Ladies Pre-Owned Rolex Watches" 
                         FontSize="11" IsEnabled="False"/>
-                <TextBox Style="{StaticResource TextBoxStyle2}"
+                <TextBox x:Name="price3"
+                         Style="{StaticResource TextBoxStyle2}"
                          Grid.Row="1" Text="$ 8.000,00" 
                          FontSize="12" IsEnabled="False"/>
                 <Button Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
