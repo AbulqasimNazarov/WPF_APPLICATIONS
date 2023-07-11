@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SwatchBoutique"
         x:Name="WINDOW1"
         mc:Ignorable="d"
-        Title="ROLEX STORE APPLICATION" Height="577" Width="583" ResizeMode="NoResize">
+        Title="ROLEX STORE APPLICATION" Height="{Binding WindowHeight, Mode=TwoWay}" Width="583" ResizeMode="NoResize">
 
     <Window.Resources>
         <ResourceDictionary>

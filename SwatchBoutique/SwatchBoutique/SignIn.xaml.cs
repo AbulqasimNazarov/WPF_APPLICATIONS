@@ -26,16 +26,6 @@ namespace SwatchBoutique
             
         }
 
-        private void CHECKING(object sender, RoutedEventArgs e)
-        {
-            var bitmapImage4 = new BitmapImage();
-
-            if (this.ShowPasswordCHekcBox.IsChecked == true)
-            {
-                this.EMOJI.Source = bitmapImage4.ChangePic("Assets/emoji1.png");
-            }
-            else
-                this.EMOJI.Source = bitmapImage4.ChangePic("Assets/emoji2.jpg");
-        }
+        
     }
 }

@@ -20,7 +20,7 @@ namespace SwatchBoutique
     /// </summary>
     public partial class MainWindow : Window
     {
-        public double WindowHeight => 577;
+        public double WindowHeight { get; set; } = 800;
         public System.Windows.Media.ImageSource Icon { get; set; }
         public MainWindow()
         {

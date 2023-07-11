@@ -9,7 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="190"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="25"/>
@@ -62,7 +62,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="ShowPasswordCHekcBox" Grid.Column="1"
-                      Content="Show Password" Checked="CHECKING"/>
+                      Content="Show Password"/>
         </Grid>
 
         <Grid Grid.Row="7">
@@ -77,7 +77,7 @@
 
 
         <Image Source="\Assets\LogoSign.png"/>
-        <Image x:Name="EMOJI" Source="\Assets\emoji2.jpg" Grid.Row="1"/>
+        <Image x:Name="EMOJI" Source="\Assets\emoji1.png" Grid.Row="1"/>
         
     </Grid>
 </Window>
