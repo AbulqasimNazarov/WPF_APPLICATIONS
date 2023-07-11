@@ -24,7 +24,7 @@ namespace SwatchBoutique
         public MainWindow()
         {
             InitializeComponent();
-
+            
         }
 
         
@@ -43,7 +43,9 @@ namespace SwatchBoutique
 
                 objMen.ShowDialog();
             }
-           
+            objMen.Close();
+            objWomen.Close();
+
         }
 
         

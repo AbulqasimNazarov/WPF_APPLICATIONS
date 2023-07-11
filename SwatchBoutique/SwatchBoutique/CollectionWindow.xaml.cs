@@ -26,6 +26,8 @@ namespace SwatchBoutique
         {
             InitializeComponent();
             this.DataContext = this;
+            this.womenPic2.Height = 180;
+            this.womenPic3.Height = 180;
             
         }
 
@@ -50,7 +52,7 @@ namespace SwatchBoutique
             this.womenPic3.Source = bitmapImage3.ChangePic("Assets/men3 - Copy.png");
 
 
-            
+
 
             this.Info1.Text = "Men Pre-Owned Rolex Watches";
             this.Info2.Text = "Men Pre-Owned Rolex Watches";
