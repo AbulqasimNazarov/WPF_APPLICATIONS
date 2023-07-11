@@ -20,19 +20,24 @@ namespace SwatchBoutique
     /// </summary>
     public partial class MainWindow : Window
     {
+        public double WindowHeight => 577;
         public System.Windows.Media.ImageSource Icon { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.DataContext = this;
+            this.buttonShoppingBag.IsEnabled = false;
+            //this.WINDOW1.Height = 200;
         }
 
         
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
             CollectionWindow objWomen = new CollectionWindow();
             CollectionWindow objMen = new CollectionWindow("MEN");
+            SignIn objSIgn = new SignIn();
             if ((sender as Button).Name == "buttonWomen")
             {
                 Console.WriteLine("woman");
@@ -43,9 +48,13 @@ namespace SwatchBoutique
 
                 objMen.ShowDialog();
             }
+            else if((sender as Button).Name == "buttonSignIn") 
+            { 
+                objSIgn.ShowDialog();
+            }
             objMen.Close();
             objWomen.Close();
-
+            objSIgn.Close();
         }
 
         

@@ -8,7 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\emoji1.png" />
+    <None Remove="Assets\emoji2.jpg" />
     <None Remove="Assets\Logo.png" />
+    <None Remove="Assets\LogoSign.png" />
     <None Remove="Assets\m1.png" />
     <None Remove="Assets\men1.png" />
     <None Remove="Assets\men2 - Copy.png" />
@@ -20,6 +23,18 @@
     <None Remove="Assets\Women1.png" />
     <None Remove="Assets\Women2.png" />
     <None Remove="Assets\Women3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\emoji1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\emoji2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\LogoSign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
