@@ -6,16 +6,29 @@
         xmlns:local="clr-namespace:SwatchBoutique"
         mc:Ignorable="d"
         Title="SignIn" Height="550" Width="450" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./ButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="190"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="25"/>
-            <RowDefinition Height="30"/>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="7"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="7"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -55,17 +68,17 @@
             <TextBox x:Name="InputPassword" Grid.Column="1"/>
             
         </Grid>
-        <Grid Grid.Row="6">
+        <Grid Grid.Row="7">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="ShowPasswordCHekcBox" Grid.Column="1"
-                      Content="Show Password"/>
+                      Content="Show Password" FontSize="10"/>
         </Grid>
 
-        <Grid Grid.Row="7">
+        <Grid Grid.Row="9">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="220"/>
@@ -74,10 +87,21 @@
             <Button x:Name="buttonSIGN" Content="Sign In" Background="Blue" Grid.Column="1" Foreground="White"/>
         </Grid>
 
+        <Grid Grid.Row="11">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="buttonRegistration" Content="Registration" Grid.Column="1"
+                    Style="{StaticResource MenuButtonsStyle}" FontSize="12"
+                    Click="Registration_click"/>
+        </Grid>
 
 
-        <Image Source="\Assets\LogoSign.png"/>
-        <Image x:Name="EMOJI" Source="\Assets\emoji1.png" Grid.Row="1"/>
+
+        <Image Grid.Row="1" Source="\Assets\LogoSign.png"/>
+        
         
     </Grid>
 </Window>

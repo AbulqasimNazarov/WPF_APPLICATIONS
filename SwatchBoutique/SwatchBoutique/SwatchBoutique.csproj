@@ -26,12 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\emoji1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\emoji2.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Assets\LogoSign.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

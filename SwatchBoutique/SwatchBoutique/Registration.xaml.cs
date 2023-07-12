@@ -15,22 +15,19 @@ using System.Windows.Shapes;
 namespace SwatchBoutique
 {
     /// <summary>
-    /// Interaction logic for SignIn.xaml
+    /// Interaction logic for Registration.xaml
     /// </summary>
-    public partial class SignIn : Window
+    public partial class Registration : Window
     {
-        public SignIn()
+        public Registration()
         {
             InitializeComponent();
             
-            
         }
 
-        private void Registration_click(object sender, RoutedEventArgs e)
+        private void CANCEL_Click(object sender, RoutedEventArgs e)
         {
-            Registration objRegistartion = new Registration();
-            objRegistartion.ShowDialog();
-            objRegistartion.Close();
+            this.Close();
         }
     }
 }

@@ -20,7 +20,8 @@ namespace SwatchBoutique
     /// </summary>
     public partial class CollectionWindow : Window
     {
-        
+        public double WindowHeight { get; set; } = 577;
+        public double WindowWidth { get; set; } = 583;
 
         public CollectionWindow()
         {
