@@ -23,6 +23,13 @@
     <None Remove="Assets\Women1.png" />
     <None Remove="Assets\Women2.png" />
     <None Remove="Assets\Women3.png" />
+    <None Remove="Data\DataOfRegisteredUsers.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\DataOfRegisteredUsers.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

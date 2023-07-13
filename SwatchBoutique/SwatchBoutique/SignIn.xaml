@@ -84,7 +84,9 @@
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="buttonSIGN" Content="Sign In" Background="Blue" Grid.Column="1" Foreground="White"/>
+            <Button x:Name="buttonSIGN" Content="Sign In" 
+                    Style="{StaticResource BlueButtons}"
+                    Grid.Column="1"/>
         </Grid>
 
         <Grid Grid.Row="11">

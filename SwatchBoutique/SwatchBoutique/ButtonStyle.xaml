@@ -126,13 +126,13 @@
         </Setter>
     </Style>
 
-    <!--<Style TargetType="Button">
+    <Style x:Key="BlueButtons" TargetType="Button">
         <Style.Setters>
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="FontFamily" Value="Bahnschrift Light"/>
+            <Setter Property="Background" Value="Blue"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style.Setters>
 
         
-    </Style>-->
+    </Style>
 
 </ResourceDictionary>

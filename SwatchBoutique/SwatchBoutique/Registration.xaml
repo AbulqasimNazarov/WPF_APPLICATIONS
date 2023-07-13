@@ -6,6 +6,15 @@
         xmlns:local="clr-namespace:SwatchBoutique"
         mc:Ignorable="d"
         Title="Registration" Height="450" Width="300" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./ButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -36,22 +45,25 @@
         <TextBox x:Name="NametextBox" Grid.Row="2" Grid.Column="1"/>
         <Label Content="Surname" Grid.Row="3" Grid.Column="1" FontSize="12"/>
         <TextBox x:Name="SurnametextBox" Grid.Row="4" Grid.Column="1"/>
-        
         <Label Content="Email" Grid.Row="5" Grid.Column="1" FontSize="12"/>
         <TextBox x:Name="EmailTextBox" Grid.Row="6" Grid.Column="1"/>
         <Label Content="Password" Grid.Row="7" Grid.Column="1" FontSize="12"/>
-        <TextBox x:Name="PasswordTextBox" Grid.Row="8" Grid.Column="1"/>
+        <TextBox x:Name="PasswordTextBox" Grid.Row="8" 
+                 Grid.Column="1" PreviewTextInput="passwordTextBox_PreviewTextInput"
+         Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <Label Content="Bank Card" Grid.Row="9" Grid.Column="1" FontSize="12"/>
         <TextBox x:Name="BankCardTextBox" Grid.Row="10" Grid.Column="1"/>
 
-        <Button x:Name="buttonOK" Grid.Row="12" 
-                Content="CANCEL" Width="70"
-                Background="Blue" Foreground="White"
-                Grid.Column="1" HorizontalAlignment="Right" Click="CANCEL_Click"/>
         <Button x:Name="buttonCancel" Grid.Row="12" 
+                Content="CANCEL" Width="70"
+                Style="{StaticResource BlueButtons}"
+                Grid.Column="1" HorizontalAlignment="Right" Click="CANCEL_Click"/>
+        <Button x:Name="buttonOk" Grid.Row="12" 
                 Content="OK" Width="70"
-                Background="Blue" Foreground="White"
-                Grid.Column="1" HorizontalAlignment="Left"/>
+                Style="{StaticResource BlueButtons}"
+                Grid.Column="1" HorizontalAlignment="Left" Click="buttonOKregistration_click"/>
+
+        
 
 
         <Image Grid.Column="1" Source="\Assets\Logo.png"/>

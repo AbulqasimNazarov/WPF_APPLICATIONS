@@ -21,8 +21,7 @@ namespace SwatchBoutique
     {
         public SignIn()
         {
-            InitializeComponent();
-            
+            InitializeComponent();          
             
         }
 
