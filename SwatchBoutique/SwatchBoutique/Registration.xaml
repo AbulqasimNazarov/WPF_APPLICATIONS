@@ -49,8 +49,7 @@
         <TextBox x:Name="EmailTextBox" Grid.Row="6" Grid.Column="1"/>
         <Label Content="Password" Grid.Row="7" Grid.Column="1" FontSize="12"/>
         <TextBox x:Name="PasswordTextBox" Grid.Row="8" 
-                 Grid.Column="1" PreviewTextInput="passwordTextBox_PreviewTextInput"
-         Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                 Grid.Column="1"/>
         <Label Content="Bank Card" Grid.Row="9" Grid.Column="1" FontSize="12"/>
         <TextBox x:Name="BankCardTextBox" Grid.Row="10" Grid.Column="1"/>
 

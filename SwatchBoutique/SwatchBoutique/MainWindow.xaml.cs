@@ -22,6 +22,7 @@ namespace SwatchBoutique
     {
         public double WindowHeight { get; set; } = 577;
         public double WindowWidth { get; set; } = 583;
+        public static bool SignedIN = false;
         public System.Windows.Media.ImageSource Icon { get; set; }
         public MainWindow()
         {
@@ -52,6 +53,11 @@ namespace SwatchBoutique
             else if((sender as Button).Name == "buttonSignIn") 
             { 
                 objSIgn.ShowDialog();
+                if (MainWindow.SignedIN == true)
+                {
+                    this.buttonSignIn.Content = "☠";
+                    this.buttonShoppingBag.IsEnabled = true;
+                }
             }
             objMen.Close();
             objWomen.Close();

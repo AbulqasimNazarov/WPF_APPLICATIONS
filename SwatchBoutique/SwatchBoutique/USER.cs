@@ -17,7 +17,7 @@ namespace SwatchBoutique
         public int BankCard { get; set; }
 
 
-        public List<USER>? LoadUsers()
+        public static List<USER> LoadUsers()
         {
             string usersJson = File.ReadAllText("Data/DataOfRegisteredUsers.json");
             return JsonSerializer.Deserialize<List<USER>>(usersJson);

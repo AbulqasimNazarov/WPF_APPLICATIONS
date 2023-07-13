@@ -19,12 +19,13 @@ namespace SwatchBoutique
     /// </summary>
     public partial class Registration : Window
     {
-        public List<USER> users { get; set; }
+        public List<USER> users { get; set; } = new List<USER>();
         
         public Registration()
         {
             InitializeComponent();
-            //this.buttonOk.IsEnabled = false;
+            this.users = USER.LoadUsers();
+            
             
         }
 
@@ -42,10 +43,10 @@ namespace SwatchBoutique
             string BankCarD = this.BankCardTextBox.Text;
             bool ForBankCard = true;
             if (string.IsNullOrEmpty(NamE) == true && string.IsNullOrWhiteSpace(NamE) == true
-                || string.IsNullOrEmpty(SurnamE) == true && string.IsNullOrEmpty(SurnamE) == true
-                || string.IsNullOrEmpty(EmaiL) == true && string.IsNullOrEmpty(EmaiL) == true
-                || string.IsNullOrEmpty(PassworD) == true && string.IsNullOrEmpty(PassworD) == true
-                || string.IsNullOrEmpty(BankCarD) == true && string.IsNullOrEmpty(BankCarD) == true)
+                || string.IsNullOrEmpty(SurnamE) == true && string.IsNullOrWhiteSpace(SurnamE) == true
+                || string.IsNullOrEmpty(EmaiL) == true && string.IsNullOrWhiteSpace(EmaiL) == true
+                || string.IsNullOrEmpty(PassworD) == true && string.IsNullOrWhiteSpace(PassworD) == true
+                || string.IsNullOrEmpty(BankCarD) == true && string.IsNullOrWhiteSpace(BankCarD) == true)
             {
                 MessageBox.Show("Fields couldnt be empty");
             }
@@ -82,6 +83,7 @@ namespace SwatchBoutique
                 this.users.Add(user);
 
                 user?.SaveToJson(this.users);
+                this.Close();
             }
 
             
@@ -89,13 +91,7 @@ namespace SwatchBoutique
         }
 
 
-        private void passwordTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            int caretIndex = this.PasswordTextBox.CaretIndex;
-            this.PasswordTextBox.Text += "*";
-            this.PasswordTextBox.CaretIndex = caretIndex + 1;
-            e.Handled = true;
-        }
+        
 
 
     }

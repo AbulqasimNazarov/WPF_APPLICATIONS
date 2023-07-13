@@ -19,17 +19,44 @@ namespace SwatchBoutique
     /// </summary>
     public partial class SignIn : Window
     {
+        public List<USER> users = new List<USER>();
+
         public SignIn()
         {
-            InitializeComponent();          
-            
+            InitializeComponent();
+            users = USER.LoadUsers();
+            if (MainWindow.SignedIN == true)
+            {
+                this.InputEmail.Visibility = Visibility.Hidden;
+                this.InputPassword.Visibility = Visibility.Hidden;
+            }
+
         }
+
+        
+
+
 
         private void Registration_click(object sender, RoutedEventArgs e)
         {
             Registration objRegistartion = new Registration();
             objRegistartion.ShowDialog();
             objRegistartion.Close();
+            this.Close();
+        }
+
+        private void buttonSIGN_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < this.users.Count; i++)
+            {
+                if (this.InputPassword.Text == this.users[i].Password && this.InputEmail.Text == this.users[i].Email)
+                {
+                    MainWindow.SignedIN = true;
+                    this.Close();
+                }
+               
+
+            }
         }
     }
 }
