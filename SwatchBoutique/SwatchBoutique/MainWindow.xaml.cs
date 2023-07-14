@@ -29,7 +29,6 @@ namespace SwatchBoutique
             InitializeComponent();
             this.DataContext = this;
             this.buttonShoppingBag.IsEnabled = false;
-            //this.WINDOW1.Height = 200;
         }
 
         
@@ -55,10 +54,12 @@ namespace SwatchBoutique
                 objSIgn.ShowDialog();
                 if (MainWindow.SignedIN == true)
                 {
-                    this.buttonSignIn.Content = "☠";
+                    this.buttonSignIn.Visibility = Visibility.Hidden;
                     this.buttonShoppingBag.IsEnabled = true;
+                    this.imageAccaountSymbol.Visibility = Visibility.Visible;
                 }
             }
+
             objMen.Close();
             objWomen.Close();
             objSIgn.Close();

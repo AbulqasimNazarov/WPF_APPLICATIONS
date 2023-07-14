@@ -46,6 +46,7 @@
                     x:Name="buttonSignIn"
                     Click="button_Click"
                     Style="{StaticResource MenuButtonsStyle}"/>
+            <Image x:Name="imageAccaountSymbol" Source="\Assets\znachokAccaount.png" Visibility="Hidden"/>
             <Button Content="SHOPPING BAG" Grid.Column="7"
                     x:Name="buttonShoppingBag"
                     Click="button_Click"

@@ -29,6 +29,12 @@ namespace SwatchBoutique
             {
                 this.InputEmail.Visibility = Visibility.Hidden;
                 this.InputPassword.Visibility = Visibility.Hidden;
+                this.labelEmail.Visibility = Visibility.Hidden;
+                this.labelPassword.Visibility = Visibility.Hidden;
+                this.checkBoxShowPassword.Visibility = Visibility.Hidden;
+                this.buttonSIGN.Visibility = Visibility.Hidden;
+                this.imageAccount.Visibility = Visibility.Visible;
+                this.buttonRegistration.Content = "Log Out";
             }
 
         }

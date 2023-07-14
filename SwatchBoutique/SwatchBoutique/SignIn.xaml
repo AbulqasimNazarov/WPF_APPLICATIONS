@@ -38,7 +38,7 @@
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Content="Email" Grid.Column="1" FontSize="12"/>
+            <Label x:Name="labelEmail" Content="Email" Grid.Column="1" FontSize="12"/>
         </Grid>
 
         <Grid Grid.Row="3">
@@ -56,7 +56,7 @@
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Content="Password" Grid.Column="1" FontSize="12"/>
+            <Label x:Name="labelPassword" Content="Password" Grid.Column="1" FontSize="12"/>
         </Grid>
 
         <Grid Grid.Row="5">
@@ -74,8 +74,11 @@
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <CheckBox x:Name="ShowPasswordCHekcBox" Grid.Column="1"
+            <CheckBox x:Name="checkBoxShowPassword" Grid.Column="1"
                       Content="Show Password" FontSize="10"/>
+
+            
+
         </Grid>
 
         <Grid Grid.Row="9">
@@ -88,6 +91,8 @@
                     Style="{StaticResource BlueButtons}"
                     Click="buttonSIGN_Click" 
                     Grid.Column="1"/>
+            <Image x:Name="imageAccount" Grid.Column="1"
+                   Source="\Assets\Accaount.jpg" Visibility="Hidden"/>
         </Grid>
 
         <Grid Grid.Row="11">
@@ -99,6 +104,8 @@
             <Button x:Name="buttonRegistration" Content="Registration" Grid.Column="1"
                     Style="{StaticResource MenuButtonsStyle}" FontSize="12"
                     Click="Registration_click"/>
+
+
         </Grid>
 
 

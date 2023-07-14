@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Accaount.jpg" />
     <None Remove="Assets\emoji1.png" />
     <None Remove="Assets\emoji2.jpg" />
     <None Remove="Assets\Logo.png" />
@@ -33,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Accaount.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\LogoSign.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
