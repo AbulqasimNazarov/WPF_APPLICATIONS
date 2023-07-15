@@ -39,6 +39,7 @@ namespace SwatchBoutique
             CollectionWindow objWomen = new CollectionWindow();
             CollectionWindow objMen = new CollectionWindow("MEN");
             SignIn objSIgn = new SignIn();
+            ShoppingBag objShoppingBag = new ShoppingBag();
             if ((sender as Button).Name == "buttonWomen")
             {
                 Console.WriteLine("woman");
@@ -56,7 +57,7 @@ namespace SwatchBoutique
                 {
 
                     this.buttonShoppingBag.IsEnabled = true;
-                    this.buttonSignIn.Content = "⌚";
+                    this.buttonSignIn.Content = "🤠";
 
                 }
                 else
@@ -65,7 +66,12 @@ namespace SwatchBoutique
                     this.buttonShoppingBag.IsEnabled = false;
                 }
             }
+            else if ((sender as Button).Name == "buttonShoppingBag")
+            {
+                objShoppingBag.ShowDialog();
+            }
 
+            objShoppingBag.Close();
             objMen.Close();
             objWomen.Close();
             objSIgn.Close();

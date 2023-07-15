@@ -5,7 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwatchBoutique"
         mc:Ignorable="d"
-        Title="ShoppingBag" Height="550" Width="550" ResizeMode="NoResize">
+        Title="ShoppingBag" Height="550" Width="590" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./ButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+        
+        
+    </Window.Resources>
+
+
+    
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -14,12 +29,92 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Label x:Name="nameOfPage" Content="SHOPPING BAG" 
                FontSize="17" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Your Shopping Bag" Grid.Row="1"
+               FontFamily="Segoe UI Semibold"/>
+        <Image x:Name="imageShoppingBag" Source="\Assets\men1.png"
+               Grid.Row="2"/>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="INFO" Style="{StaticResource TextBoxStyle1}" Width="235"/>
+            <CheckBox Grid.Row="2" FontSize="11"
+                      Content="3 years of all-round protection for only 500$"/>
+
+            <CheckBox Grid.Row="3" FontSize="11"
+                      Content="Gift wrap for this item (100$)"/>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="26"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="comboBoxCount" Background="White"
+                 Width="50"/>
+            <TextBox x:Name="textBoxPrice" Grid.Row="1" Width="100"
+                     Style="{StaticResource TextBoxStyle1}"/>
+
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Subtotal:"/>
+                <TextBox x:Name="textBoxSubtotal" Grid.Column="1"
+                         Text="TEST" TextAlignment="Right"
+                         VerticalAlignment="Top"
+                         Style="{StaticResource TextBoxStyle1}" Width="60" HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Shipping:"/>
+                <Label Content="FREE" Grid.Column="1" HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Total:"/>
+                <TextBox x:Name="textBoxTotal" Grid.Column="1"
+                         Text="TEST" TextAlignment="Right"
+                         VerticalAlignment="Top"
+                         Style="{StaticResource TextBoxStyle1}" Width="60" HorizontalAlignment="Right"/>
+            </Grid>
+
+            <Button Grid.Row="3" Content="PAY"
+                    Style="{StaticResource PayButtonStyle}"/>
+
+
+        </Grid>
+
+
     </Grid>
 </Window>

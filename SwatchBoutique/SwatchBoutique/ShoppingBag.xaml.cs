@@ -22,6 +22,15 @@ namespace SwatchBoutique
         public ShoppingBag()
         {
             InitializeComponent();
+            //this.comboBoxCount.def
+            this.comboBoxCount.Items.Add("1");
+            this.comboBoxCount.Items.Add("2");
+            this.comboBoxCount.Items.Add("3");
+        }
+
+        public ShoppingBag(string name) : this()
+        {
+
         }
     }
 }
