@@ -49,10 +49,12 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <TextBox x:Name="INFO" Style="{StaticResource TextBoxStyle1}" Width="235"/>
-            <CheckBox Grid.Row="2" FontSize="11"
+            <CheckBox x:Name="checkBoxQarantiya"
+                Grid.Row="2" FontSize="11"
                       Content="3 years of all-round protection for only 500$"/>
 
-            <CheckBox Grid.Row="3" FontSize="11"
+            <CheckBox x:Name="checkBoxGift"
+                Grid.Row="3" FontSize="11"
                       Content="Gift wrap for this item (100$)"/>
 
         </Grid>
@@ -86,7 +88,7 @@
                 <Label Content="Subtotal:"/>
                 <TextBox x:Name="textBoxSubtotal" Grid.Column="1"
                          Text="TEST" TextAlignment="Right"
-                         VerticalAlignment="Top"
+                         VerticalAlignment="Top" FontSize="10"
                          Style="{StaticResource TextBoxStyle1}" Width="60" HorizontalAlignment="Right"/>
             </Grid>
             <Grid Grid.Row="1">
@@ -105,7 +107,7 @@
                 <Label Content="Total:"/>
                 <TextBox x:Name="textBoxTotal" Grid.Column="1"
                          Text="TEST" TextAlignment="Right"
-                         VerticalAlignment="Top"
+                         VerticalAlignment="Top" FontSize="10"
                          Style="{StaticResource TextBoxStyle1}" Width="60" HorizontalAlignment="Right"/>
             </Grid>
 

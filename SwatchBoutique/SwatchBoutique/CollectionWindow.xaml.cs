@@ -32,9 +32,9 @@ namespace SwatchBoutique
             
         }
 
-        public CollectionWindow(string name)
+        public CollectionWindow(string name) :this()
         {
-            InitializeComponent();
+            //InitializeComponent();
             this.DataContext = this;
             this.nameOfThePage.Content = name;
 
@@ -57,6 +57,34 @@ namespace SwatchBoutique
             
         }
 
-        
+        private void buttonBuy3_Click(object sender, RoutedEventArgs e)
+        {
+            if ((sender as Button).Name == "buttonBuy3")
+            {
+                ProduktClass product = new ProduktClass(this.womenPic3.Source.ToString(), this.info3.Text, this.price3.Text);
+                this.buttonBuy1.IsEnabled = false;
+                this.buttonBuy2.IsEnabled = false;
+                this.buttonBuy3.IsEnabled = false;
+                product.SaveProduct(product);
+            }
+            else if ((sender as Button).Name == "buttonBuy2")
+            {
+                ProduktClass product = new ProduktClass(this.womenPic2.Source.ToString(), this.Info2.Text, this.price2.Text);
+                this.buttonBuy1.IsEnabled = false;
+                this.buttonBuy2.IsEnabled = false;
+                this.buttonBuy3.IsEnabled = false;
+                product.SaveProduct(product);
+            }
+            else if ((sender as Button).Name == "buttonBuy1")
+            {
+                ProduktClass product = new ProduktClass(this.womenPic1.Source.ToString(), this.Info1.Text, this.price1.Text);
+                this.buttonBuy1.IsEnabled = false;
+                this.buttonBuy2.IsEnabled = false;
+                this.buttonBuy3.IsEnabled = false;
+                product.SaveProduct(product);
+            }
+
+
+        }
     }
 }

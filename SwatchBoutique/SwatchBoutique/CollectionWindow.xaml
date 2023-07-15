@@ -59,7 +59,9 @@
                          Style="{StaticResource TextBoxStyle2}"
                          Grid.Row="1" Text="$ 5.000,00" 
                          FontSize="12" IsEnabled="False"/>
-                <Button Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
+                <Button x:Name="buttonBuy1"
+                        Click="buttonBuy3_Click"
+                    Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
 
             </Grid>
 
@@ -78,7 +80,10 @@
                          Style="{StaticResource TextBoxStyle2}"
                          Grid.Row="1" Text="$ 6.000,00" 
                          FontSize="12" IsEnabled="False"/>
-                <Button Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
+                <Button Grid.Row="2" Content="BUY" 
+                        x:Name="buttonBuy2"
+                        Click="buttonBuy3_Click"
+                        Style="{StaticResource BUYButtonStyle}"/>
             </Grid>
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
@@ -94,7 +99,10 @@
                          Style="{StaticResource TextBoxStyle2}"
                          Grid.Row="1" Text="$ 8.000,00" 
                          FontSize="12" IsEnabled="False"/>
-                <Button Grid.Row="2" Content="BUY" Style="{StaticResource BUYButtonStyle}"/>
+                <Button Grid.Row="2" Content="BUY" 
+                        x:Name="buttonBuy3"
+                        Click="buttonBuy3_Click"
+                        Style="{StaticResource BUYButtonStyle}"/>
             </Grid>
 
 
