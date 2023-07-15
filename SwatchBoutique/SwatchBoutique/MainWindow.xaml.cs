@@ -54,9 +54,15 @@ namespace SwatchBoutique
                 objSIgn.ShowDialog();
                 if (MainWindow.SignedIN == true)
                 {
-                    this.buttonSignIn.Visibility = Visibility.Hidden;
+
                     this.buttonShoppingBag.IsEnabled = true;
-                    this.imageAccaountSymbol.Visibility = Visibility.Visible;
+                    this.buttonSignIn.Content = "⌚";
+
+                }
+                else
+                {
+                    this.buttonSignIn.Content = "SIGN IN";
+                    this.buttonShoppingBag.IsEnabled = false;
                 }
             }
 

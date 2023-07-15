@@ -49,14 +49,17 @@ namespace SwatchBoutique
                 || string.IsNullOrEmpty(BankCarD) == true && string.IsNullOrWhiteSpace(BankCarD) == true)
             {
                 MessageBox.Show("Fields couldnt be empty");
+                return;
             }
             if (char.IsLower(NamE[0]) == true || char.IsLower(SurnamE[0]) == true)
             {
                 MessageBox.Show("Name and Surname must start with Upper letter");
+                return;
             }
             if (EmaiL.Contains("@") == false || EmaiL.Contains(".") == false || char.IsLetter(EmaiL[0]) == false)
             {
                 MessageBox.Show("Incorrect EMAIL");
+                return;
             }
             for (int i = 0; i < BankCarD.Length; i++)
             {
@@ -68,6 +71,7 @@ namespace SwatchBoutique
             if (ForBankCard == false)
             {
                 MessageBox.Show("Incorrect Bank Card ID");
+                return;
             }
             else
             {

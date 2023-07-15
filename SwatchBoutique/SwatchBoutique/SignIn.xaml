@@ -65,19 +65,26 @@
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="InputPassword" Grid.Column="1"/>
-            
+            <TextBox x:Name="InputPassword" Grid.Column="1"
+                     TextChanged="InputPassword_TextChanged"/>
+            <PasswordBox x:Name="passwBox" Grid.Column="1" Visibility="Hidden"/>
+
         </Grid>
         <Grid Grid.Row="7">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="30.6"/>
+                <ColumnDefinition Width="189.4"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <CheckBox x:Name="checkBoxShowPassword" Grid.Column="1"
-                      Content="Show Password" FontSize="10"/>
+                      Content="Show Password" FontSize="10" Grid.ColumnSpan="2"
+                      IsChecked="True"
+                      Checked="checkBoxShowPassword_Checked"
+                      Unchecked="checkBoxShowPassword_Unchecked"/>
 
-            
+
+
 
         </Grid>
 
@@ -111,7 +118,7 @@
 
 
         <Image Grid.Row="1" Source="\Assets\LogoSign.png"/>
-        
-        
+
+
     </Grid>
 </Window>
