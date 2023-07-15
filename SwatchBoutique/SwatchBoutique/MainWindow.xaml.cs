@@ -57,11 +57,14 @@ namespace SwatchBoutique
             else if((sender as Button).Name == "buttonSignIn") 
             { 
                 objSIgn.ShowDialog();
+                
+                List<USER> objUsers = new List<USER>();
+                objUsers = USER.LoadUsers();
                 if (MainWindow.SignedIN == true)
                 {
 
                     this.buttonShoppingBag.IsEnabled = true;
-                    this.buttonSignIn.Content = "🤠";
+                    this.buttonSignIn.Content = $"🤠{objUsers[0].Name}";
 
                 }
                 else

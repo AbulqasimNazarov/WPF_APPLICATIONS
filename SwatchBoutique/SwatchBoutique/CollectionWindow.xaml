@@ -31,7 +31,7 @@
             </Grid.ColumnDefinitions>
 
             <Image x:Name="womenPic1" 
-                   Source="{Binding BindingForImage, Mode=TwoWay}" Grid.Column="0"/>
+                   Source="\Assets\Women1.png" Grid.Column="0"/>
             <Image x:Name="womenPic2" 
                    Source="\Assets\Women2.png" Grid.Column="1"/>
             <Image x:Name="womenPic3" 
