@@ -1,3 +1,9 @@
 [
-
+  {
+    "Name": "Bob",
+    "Surname": "Marley",
+    "Email": "bob@mail.ru",
+    "Password": "12345",
+    "BankCard": 7896
+  }
 ]

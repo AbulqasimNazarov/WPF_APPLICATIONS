@@ -19,7 +19,7 @@ namespace SwatchBoutique
     /// </summary>
     public partial class ShoppingBag : Window
     {
-        public ProduktClass obj = new ProduktClass();
+        public ProduktClass obj { get; set; } = new ProduktClass();
 
         public int totalProp { get; set; } = new int();
         public ShoppingBag()
@@ -31,12 +31,11 @@ namespace SwatchBoutique
                 this.buttonPay.Background = Brushes.Red;
             }
 
+
             obj = ProduktClass.LoadProduct();
 
-            
 
-            BitmapImage bitmapImage = new BitmapImage();
-            if (obj?.Path != null)
+            if (obj != null)
             {
                 this.INFO.Text = obj.Info;
                 this.imageShoppingBag.Source = new BitmapImage(new Uri(obj.Path));

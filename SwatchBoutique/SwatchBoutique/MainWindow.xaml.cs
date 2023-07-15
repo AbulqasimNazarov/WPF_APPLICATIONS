@@ -24,12 +24,15 @@ namespace SwatchBoutique
         public double WindowWidth { get; set; } = 583;
         public static bool SignedIN = false;
         public static bool Boughted = false;
+
+        //public ProduktClass pr = new ProduktClass("/Assets/men1.png", "Men", "8,000.00");
         public System.Windows.Media.ImageSource Icon { get; set; }
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = this;
             this.buttonShoppingBag.IsEnabled = false;
+            //pr.SaveProduct(pr);
         }
 
         

@@ -28,7 +28,7 @@ public class ProduktClass
 
     public static ProduktClass? LoadProduct()
     {
-        string usersJson = File.ReadAllText("Data/SelectedProduct.json");
+        string? usersJson = File.ReadAllText("Data/SelectedProduct.json");
         return JsonSerializer.Deserialize<ProduktClass>(usersJson);
 
     }
