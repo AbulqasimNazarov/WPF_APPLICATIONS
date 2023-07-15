@@ -29,9 +29,13 @@ namespace SwatchBoutique
             this.comboBoxCount.Items.Add("3");
 
             obj = ProduktClass.LoadProduct();
+            //if (obj == null)
+            //{
+            //    return;
+            //}
 
             BitmapImage bitmapImage = new BitmapImage();
-            if (obj != null)
+            if (obj?.Path != null)
             {
                 this.INFO.Text = obj.Info;
                 this.textBoxPrice.Text = obj.Price;
@@ -45,7 +49,7 @@ namespace SwatchBoutique
                 return;
             }
 
-            
+
 
         }
 

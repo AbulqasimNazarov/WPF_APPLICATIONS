@@ -11,9 +11,9 @@ namespace SwatchBoutique;
 
 public class ProduktClass
 {
-    public string Path { get; set; }
-    public string Info { get; set; }
-    public string Price { get; set; }
+    public string? Path { get; set; }
+    public string? Info { get; set; }
+    public string? Price { get; set; }
 
     public ProduktClass()
     {
@@ -26,7 +26,7 @@ public class ProduktClass
         this.Price = price;
     }
 
-    public static ProduktClass LoadProduct()
+    public static ProduktClass? LoadProduct()
     {
         string usersJson = File.ReadAllText("Data/SelectedProduct.json");
         return JsonSerializer.Deserialize<ProduktClass>(usersJson);
