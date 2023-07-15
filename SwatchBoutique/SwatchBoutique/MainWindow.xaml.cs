@@ -58,13 +58,13 @@ namespace SwatchBoutique
             { 
                 objSIgn.ShowDialog();
                 
-                List<USER> objUsers = new List<USER>();
-                objUsers = USER.LoadUsers();
+                USER objUsers = new USER();
+                objUsers = USER.Loading();
                 if (MainWindow.SignedIN == true)
                 {
-
+                    //objUsers = USER.Loading();
                     this.buttonShoppingBag.IsEnabled = true;
-                    this.buttonSignIn.Content = $"🤠{objUsers[0].Name}";
+                    this.buttonSignIn.Content = $"🤠{objUsers.Name}";
 
                 }
                 else

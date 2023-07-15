@@ -65,8 +65,8 @@
                 <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="InputPassword" Grid.Column="1"
-                     TextChanged="InputPassword_TextChanged"/>
+            <TextBox x:Name="InputPassword" Grid.Column="1"/>
+
             <PasswordBox x:Name="passwBox" Grid.Column="1" Visibility="Hidden"/>
 
         </Grid>

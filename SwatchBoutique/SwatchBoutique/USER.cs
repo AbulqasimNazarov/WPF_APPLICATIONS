@@ -30,5 +30,20 @@ namespace SwatchBoutique
             File.WriteAllText("Data/DataOfRegisteredUsers.json", usersJson);
         }
 
+        public static USER Loading()
+        {
+            string usersJson = File.ReadAllText("Data/SignedAccaount.json");
+            return JsonSerializer.Deserialize<USER>(usersJson);
+
+        }
+
+        public void Saving(USER u)
+        {
+            string usersJson = JsonSerializer.Serialize(u);
+            File.WriteAllText("Data/SignedAccaount.json", usersJson);
+        }
+
+
+
     }
 }

@@ -63,12 +63,14 @@ namespace SwatchBoutique
 
         private void buttonSIGN_Click(object sender, RoutedEventArgs e)
         {
+            USER ur = new USER();
             for (int i = 0; i < this.users.Count; i++)
             {
                 if (this.InputPassword.Text == this.users[i].Password && this.InputEmail.Text == this.users[i].Email)
                 {
                     MainWindow.SignedIN = true;
                     MainWindow.Boughted = false;
+                    ur.Saving(this.users[i]);
                     this.Close();
                 }
                
@@ -76,16 +78,7 @@ namespace SwatchBoutique
             }
         }
 
-        private void InputPassword_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //this.InputPassword.Text = "*";
-            //string pas = this.InputPassword.Text;
-            //this.InputPassword.Text = string.Empty;
-            //for (int i = 0; i < pas.Length; i++)
-            //{
-            //    this.InputPassword.Text += "*";
-            //}
-        }
+        
 
         private void checkBoxShowPassword_Checked(object sender, RoutedEventArgs e)
         {

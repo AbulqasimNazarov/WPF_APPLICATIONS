@@ -26,6 +26,7 @@
     <None Remove="Assets\Women3.png" />
     <None Remove="Data\DataOfRegisteredUsers.json" />
     <None Remove="Data\SelectedProduct.json" />
+    <None Remove="Data\SignedAccaount.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +34,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\SelectedProduct.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\SignedAccaount.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
