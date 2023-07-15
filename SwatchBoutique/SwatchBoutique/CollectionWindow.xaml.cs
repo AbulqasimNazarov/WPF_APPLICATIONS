@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,16 +13,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using Image = System.Windows.Controls.Image;
 
 namespace SwatchBoutique
 {
     /// <summary>
     /// Interaction logic for CollectionWindow.xaml
     /// </summary>
-    public partial class CollectionWindow : Window
+    public partial class CollectionWindow : Window, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler? PropertyChanged;
         public double WindowHeight { get; set; } = 577;
         public double WindowWidth { get; set; } = 583;
+
+        public BitmapImage forBinding { get; set; } = new BitmapImage();
+
+        public List<Button> buttonBuyList { get; set; } = new List<Button>();
+        public Image BindingForImage { get; set; } = new Image();
+
+        public List<Image> imageBuyList { get; set; } = new List<Image>();
+
+        List<string> infotextList { get; set; } = new List<string>();
+        List<string> priceList { get; set; } = new List<string>();
 
         public CollectionWindow()
         {
@@ -29,6 +42,19 @@ namespace SwatchBoutique
             this.DataContext = this;
             this.womenPic2.Height = 180;
             this.womenPic3.Height = 180;
+            this.buttonBuyList.Add(this.buttonBuy1);
+            this.buttonBuyList.Add(this.buttonBuy2);
+            this.buttonBuyList.Add(this.buttonBuy3);
+            this.imageBuyList.Add(this.womenPic1);
+            this.imageBuyList.Add(this.womenPic2);
+            this.imageBuyList.Add(this.womenPic3);
+            this.infotextList.Add(this.Info1.Text);
+            this.infotextList.Add(this.Info2.Text);
+            this.infotextList.Add(this.info3.Text);
+            this.priceList.Add(this.price1.Text);
+            this.priceList.Add(this.price2.Text);
+            this.priceList.Add(this.price3.Text);
+
             
         }
 
@@ -57,34 +83,34 @@ namespace SwatchBoutique
             
         }
 
+        
+
         private void buttonBuy3_Click(object sender, RoutedEventArgs e)
         {
-            if ((sender as Button).Name == "buttonBuy3")
-            {
-                ProduktClass product = new ProduktClass(this.womenPic3.Source.ToString(), this.info3.Text, this.price3.Text);
-                this.buttonBuy1.IsEnabled = false;
-                this.buttonBuy2.IsEnabled = false;
-                this.buttonBuy3.IsEnabled = false;
-                product.SaveProduct(product);
-            }
-            else if ((sender as Button).Name == "buttonBuy2")
-            {
-                ProduktClass product = new ProduktClass(this.womenPic2.Source.ToString(), this.Info2.Text, this.price2.Text);
-                this.buttonBuy1.IsEnabled = false;
-                this.buttonBuy2.IsEnabled = false;
-                this.buttonBuy3.IsEnabled = false;
-                product.SaveProduct(product);
-            }
-            else if ((sender as Button).Name == "buttonBuy1")
-            {
-                ProduktClass product = new ProduktClass(this.womenPic1.Source.ToString(), this.Info1.Text, this.price1.Text);
-                this.buttonBuy1.IsEnabled = false;
-                this.buttonBuy2.IsEnabled = false;
-                this.buttonBuy3.IsEnabled = false;
-                product.SaveProduct(product);
-            }
 
+            ProduktClass product = new ProduktClass();
+            string condition = (sender as Button).Name;
+            if (MainWindow.SignedIN == true)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    if (condition == this.buttonBuyList[i].Name)
+                    {
+                        product = new ProduktClass(this.imageBuyList[i].Source.ToString(), this.infotextList[i], this.priceList[i]);
+                    }
+                }
 
+                foreach (var item in this.buttonBuyList)
+                {
+                    item.IsEnabled = false;
+                    item.Background = Brushes.Red;
+                }
+                product.SaveProduct(product);
+            }
+            else
+            {
+                MessageBox.Show("For buying sign in");
+            }
         }
     }
 }

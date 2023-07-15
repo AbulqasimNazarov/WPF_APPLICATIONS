@@ -23,6 +23,7 @@ namespace SwatchBoutique
         public double WindowHeight { get; set; } = 577;
         public double WindowWidth { get; set; } = 583;
         public static bool SignedIN = false;
+        public static bool Boughted = false;
         public System.Windows.Media.ImageSource Icon { get; set; }
         public MainWindow()
         {

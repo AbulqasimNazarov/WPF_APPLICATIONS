@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SwatchBoutique"
         mc:Ignorable="d"
-        Title="ShoppingBag" Height="550" Width="590" ResizeMode="NoResize">
+        Title="ShoppingBag" Height="450" Width="480" ResizeMode="NoResize">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -26,12 +26,12 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition/>
-            <RowDefinition/>
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="250"/>
-            <ColumnDefinition/>
+            
         </Grid.ColumnDefinitions>
 
         <Label x:Name="nameOfPage" Content="SHOPPING BAG" 
@@ -49,30 +49,13 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <TextBox x:Name="INFO" Style="{StaticResource TextBoxStyle1}" Width="235"/>
-            <CheckBox x:Name="checkBoxQarantiya"
-                Grid.Row="2" FontSize="11"
-                      Content="3 years of all-round protection for only 500$"/>
 
-            <CheckBox x:Name="checkBoxGift"
-                Grid.Row="3" FontSize="11"
-                      Content="Gift wrap for this item (100$)"/>
 
         </Grid>
 
-        <Grid Grid.Row="2" Grid.Column="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="26"/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <ComboBox x:Name="comboBoxCount" Background="White"
-                 Width="50"/>
-            <TextBox x:Name="textBoxPrice" Grid.Row="1" Width="100"
-                     Style="{StaticResource TextBoxStyle1}"/>
+        
 
-        </Grid>
-
-        <Grid Grid.Row="3" Grid.Column="1">
+        <Grid Grid.Row="2" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -80,16 +63,8 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Label Content="Subtotal:"/>
-                <TextBox x:Name="textBoxSubtotal" Grid.Column="1"
-                         Text="TEST" TextAlignment="Right"
-                         VerticalAlignment="Top" FontSize="10"
-                         Style="{StaticResource TextBoxStyle1}" Width="60" HorizontalAlignment="Right"/>
+                
+               
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -112,6 +87,7 @@
             </Grid>
 
             <Button Grid.Row="3" Content="PAY"
+                    Click="Button_Click"
                     Style="{StaticResource PayButtonStyle}"/>
 
 

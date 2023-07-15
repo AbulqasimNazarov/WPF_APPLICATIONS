@@ -20,27 +20,22 @@ namespace SwatchBoutique
     public partial class ShoppingBag : Window
     {
         public ProduktClass obj = new ProduktClass();
+
+        public int totalProp { get; set; } = new int();
         public ShoppingBag()
         {
             InitializeComponent();
-            //this.comboBoxCount.def
-            this.comboBoxCount.Items.Add("1");
-            this.comboBoxCount.Items.Add("2");
-            this.comboBoxCount.Items.Add("3");
+            
 
             obj = ProduktClass.LoadProduct();
-            //if (obj == null)
-            //{
-            //    return;
-            //}
+
+            
 
             BitmapImage bitmapImage = new BitmapImage();
             if (obj?.Path != null)
             {
                 this.INFO.Text = obj.Info;
-                this.textBoxPrice.Text = obj.Price;
                 this.imageShoppingBag.Source = new BitmapImage(new Uri(obj.Path));
-                this.textBoxSubtotal.Text = obj.Price;
                 this.textBoxTotal.Text = obj.Price;
             }
             else
@@ -48,11 +43,12 @@ namespace SwatchBoutique
                 MessageBox.Show("EMPTY!!!");
                 return;
             }
-
-
-
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("We will contact you by email as soon. Thank you for choice!");
+            this.Close();
+        }
     }
 }
