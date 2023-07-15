@@ -25,7 +25,11 @@ namespace SwatchBoutique
         public ShoppingBag()
         {
             InitializeComponent();
-            
+            if (MainWindow.Boughted == true)
+            {
+                this.buttonPay.IsEnabled = false;
+                this.buttonPay.Background = Brushes.Red;
+            }
 
             obj = ProduktClass.LoadProduct();
 
@@ -48,6 +52,7 @@ namespace SwatchBoutique
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("We will contact you by email as soon. Thank you for choice!");
+            MainWindow.Boughted = true;
             this.Close();
         }
     }

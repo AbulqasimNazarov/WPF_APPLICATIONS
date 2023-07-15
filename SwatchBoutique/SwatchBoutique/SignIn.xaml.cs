@@ -68,6 +68,7 @@ namespace SwatchBoutique
                 if (this.InputPassword.Text == this.users[i].Password && this.InputEmail.Text == this.users[i].Email)
                 {
                     MainWindow.SignedIN = true;
+                    MainWindow.Boughted = false;
                     this.Close();
                 }
                

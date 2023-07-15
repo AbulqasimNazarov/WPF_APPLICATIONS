@@ -54,6 +54,14 @@ namespace SwatchBoutique
             this.priceList.Add(this.price1.Text);
             this.priceList.Add(this.price2.Text);
             this.priceList.Add(this.price3.Text);
+            //if (MainWindow.SignedIN == false)
+            //{
+            //    foreach (var item in this.buttonBuyList)
+            //    {
+            //        item.IsEnabled = false;
+            //        item.Background = Brushes.Red;
+            //    }
+            //}
 
             
         }
@@ -110,6 +118,10 @@ namespace SwatchBoutique
             else
             {
                 MessageBox.Show("For buying sign in");
+                SignIn objSign = new SignIn();
+                objSign.ShowDialog();
+                objSign.Close();
+                this.Close();
             }
         }
     }

@@ -88,6 +88,7 @@
 
             <Button Grid.Row="3" Content="PAY"
                     Click="Button_Click"
+                    x:Name="buttonPay"
                     Style="{StaticResource PayButtonStyle}"/>
 
 
