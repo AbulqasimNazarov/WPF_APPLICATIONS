@@ -38,7 +38,7 @@
                FontSize="17" FontFamily="Segoe UI Semibold"/>
         <Label Content="Your Shopping Bag" Grid.Row="1"
                FontFamily="Segoe UI Semibold"/>
-        <Image x:Name="imageShoppingBag" Source="\Assets\men1.png"
+        <Image x:Name="imageShoppingBag" Source="{Binding bindIMAGE}"
                Grid.Row="2"/>
 
         <Grid Grid.Row="2" Grid.Column="1">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +21,13 @@ namespace SwatchBoutique
     public partial class ShoppingBag : Window
     {
         public ProduktClass obj { get; set; } = new ProduktClass();
-
+        
+        public BitmapImage bindIMAGE { get; set; } = new BitmapImage();
         public int totalProp { get; set; } = new int();
         public ShoppingBag()
         {
             InitializeComponent();
+            this.DataContext = this;
             if (MainWindow.Boughted == true)
             {
                 this.buttonPay.IsEnabled = false;
@@ -38,7 +41,9 @@ namespace SwatchBoutique
             if (obj != null)
             {
                 this.INFO.Text = obj.Info;
-                this.imageShoppingBag.Source = new BitmapImage(new Uri(obj.Path));
+                this.bindIMAGE.BeginInit();
+                this.bindIMAGE.UriSource = new Uri(obj.Path, UriKind.RelativeOrAbsolute);
+                this.bindIMAGE.EndInit();
                 this.textBoxTotal.Text = obj.Price;
             }
             else

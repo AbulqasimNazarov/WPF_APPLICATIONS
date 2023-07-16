@@ -38,26 +38,26 @@ namespace SwatchBoutique
         
 
         private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-            CollectionWindow objWomen = new CollectionWindow();
-            CollectionWindow objMen = new CollectionWindow("MEN");
-            SignIn objSIgn = new SignIn();
-            ShoppingBag objShoppingBag = new ShoppingBag();
+        {         
             if ((sender as Button).Name == "buttonWomen")
             {
+                CollectionWindow objWomen = new CollectionWindow();
                 Console.WriteLine("woman");
                 objWomen.ShowDialog();
+                objWomen.Close();
             }
             else if ((sender as Button).Name == "buttonMen")
             {
-
+                CollectionWindow objMen = new CollectionWindow("MEN");
                 objMen.ShowDialog();
+                objMen.Close();
             }
             else if((sender as Button).Name == "buttonSignIn") 
-            { 
+            {
+                SignIn objSIgn = new SignIn();
                 objSIgn.ShowDialog();
-                
+                objSIgn.Close();
+
                 USER objUsers = new USER();
                 objUsers = USER.Loading();
                 if (MainWindow.SignedIN == true)
@@ -75,13 +75,15 @@ namespace SwatchBoutique
             }
             else if ((sender as Button).Name == "buttonShoppingBag")
             {
+                ShoppingBag objShoppingBag = new ShoppingBag();
                 objShoppingBag.ShowDialog();
+                objShoppingBag.Close();
             }
 
-            objShoppingBag.Close();
-            objMen.Close();
-            objWomen.Close();
-            objSIgn.Close();
+            
+            
+            
+            
         }
 
         
