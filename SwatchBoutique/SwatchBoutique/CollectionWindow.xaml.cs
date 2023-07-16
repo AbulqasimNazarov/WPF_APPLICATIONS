@@ -88,7 +88,7 @@ namespace SwatchBoutique
 
         private void buttonBuy3_Click(object sender, RoutedEventArgs e)
         {
-
+            
             ProduktClass product = new ProduktClass();
             string condition = (sender as Button).Name;
             if (MainWindow.SignedIN == true)
@@ -106,14 +106,14 @@ namespace SwatchBoutique
                     item.IsEnabled = false;
                     item.Background = Brushes.Red;
                 }
+                
                 product.SaveProduct(product);
             }
             else
             {
                 MessageBox.Show("For buying sign in");
-                SignIn objSign = new SignIn();
-                objSign.ShowDialog();
-                objSign.Close();
+                
+                
                 this.Close();
             }
         }

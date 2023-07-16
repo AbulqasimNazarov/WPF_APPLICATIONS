@@ -61,6 +61,11 @@ namespace SwatchBoutique
                 MessageBox.Show("Incorrect EMAIL");
                 return;
             }
+            if (this.PasswordTextBox.Text.Length < 8)
+            {
+                MessageBox.Show("Password must be minimum 8 elements");
+                return;
+            }
             for (int i = 0; i < BankCarD.Length; i++)
             {
                 if (char.IsDigit(BankCarD[i]) == false)
@@ -68,7 +73,7 @@ namespace SwatchBoutique
                     ForBankCard = false;
                 }
             }
-            if (ForBankCard == false)
+            if (ForBankCard == false || BankCarD.Length < 8)
             {
                 MessageBox.Show("Incorrect Bank Card ID");
                 return;

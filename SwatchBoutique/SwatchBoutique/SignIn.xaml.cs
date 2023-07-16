@@ -40,10 +40,6 @@ namespace SwatchBoutique
 
         }
 
-        
-
-
-
         private void Registration_click(object sender, RoutedEventArgs e)
         {
             if (MainWindow.SignedIN == false)
@@ -64,6 +60,7 @@ namespace SwatchBoutique
         private void buttonSIGN_Click(object sender, RoutedEventArgs e)
         {
             USER ur = new USER();
+            bool ttt = false;
             for (int i = 0; i < this.users.Count; i++)
             {
                 if (this.InputPassword.Text == this.users[i].Password && this.InputEmail.Text == this.users[i].Email)
@@ -72,17 +69,22 @@ namespace SwatchBoutique
                     MainWindow.Boughted = false;
                     ur.Saving(this.users[i]);
                     this.Close();
-                }
-               
+                    ttt = true;
+                }              
 
             }
+            if (ttt != true)
+            {
+                MessageBox.Show("Incorrect Email or Password");
+            }
+            
         }
 
         
 
         private void checkBoxShowPassword_Checked(object sender, RoutedEventArgs e)
         {
-            //this.InputPassword.Text = '\0';
+            
             this.passwBox.Visibility = Visibility.Collapsed;
             this.InputPassword.Visibility = Visibility.Visible;
             this.InputPassword.Text = this.passwBox.Password;
@@ -90,7 +92,7 @@ namespace SwatchBoutique
 
         private void checkBoxShowPassword_Unchecked(object sender, RoutedEventArgs e)
         {
-            //this.InputPassword.Text = '*';
+           
             this.passwBox.Visibility = Visibility.Visible;
             this.InputPassword.Visibility = Visibility.Collapsed;
             this.passwBox.Password = this.InputPassword.Text;
